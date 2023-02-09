@@ -36,8 +36,8 @@
                 echo "Erro, preencha o campo!";
             ?>
         </form>
-        <a href="Consultar.php"><button>Consultar</button></a>
-        <a href="Atualizar.php"><button>Atualizar</button></a>
-        <a href="Excluir.php"><button>Excluir</button></a>
+        <a href="ConsultarPessoa.php"><button>Consultar</button></a>
+        <a href="AtualizarPessoa.php"><button>Atualizar</button></a>
+        <a href="ExcluirPessoa.php"><button>Excluir</button></a>
     </body>
 </html>

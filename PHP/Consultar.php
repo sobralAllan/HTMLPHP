@@ -2,7 +2,7 @@
     namespace Projeto\HTMLPHP\PHP;
 
     require_once('Conexao.php');
-    
+
     class Consultar{
 
         public function consultarIndividual(
@@ -47,6 +47,36 @@
         }//fim do método
 
     }//fim do consultar
-
-
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar</title>
+</head>
+<body>
+    <form method="POST">
+        <label>Código: </label>
+        <input type="number" name="tCodigo" /><br><br>
+
+        <button>Consultar</button>
+        <textArea style="width:200px;height:300px">
+            <?php
+                if($_POST['tCodigo'] != ""){
+                    $conexao = new Conexao();
+                    $consul  = new Consultar();
+                    echo $consul->consultarIndividual($conexao, "pessoa",$_POST['tCodigo']);
+                    return;
+                }//fim do if
+                echo "Erro, Preencha os campos!";
+            ?>
+        </textArea>
+    </form>
+    <a href="Inserir.php"><button>Inserir</button></a>
+    <a href="Atualizar.php"><button>Atualizar</button></a>
+    <a href="Excluir.php"><button>Excluir</button></a>
+</body>
+</html>

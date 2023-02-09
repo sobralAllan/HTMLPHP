@@ -1,5 +1,5 @@
 <?php
-    namespace Projeto\HTMLPHP\PHP;
+    namespace Projeto\HTMLPHP\DAO;
 
     require_once('Conexao.php');
 
